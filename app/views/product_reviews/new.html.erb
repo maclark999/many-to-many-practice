@@ -2,6 +2,14 @@
   <h1> Review <%=@product.name %> </h1>
 </div>
 
+<% if @product_review.errors.any? %>
+<div class="alert alert-danger">
+  <% @product_review.errors.full_messages.each do |message| %>
+    <%= message %><br>
+    <% end %>
+</div>
+<% end %>
+
   <%= form_for([@product, @product_review ]) do |f| %>
         <p>
         <%= f.label :title %>

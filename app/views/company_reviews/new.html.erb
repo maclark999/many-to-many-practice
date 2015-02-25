@@ -3,6 +3,14 @@
   <h1> Review <%=@company.name %> </h1>
 </div>
 
+<% if @company_review.errors.any? %>
+<div class="alert alert-danger">
+  <% @company_review.errors.full_messages.each do |message| %>
+    <%= message %><br>
+  <% end %>
+</div>
+<% end %>
+
   <%= form_for([@company, @company_review ]) do |f| %>
         <p>
         <%= f.label :title %>

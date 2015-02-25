@@ -28,14 +28,14 @@ No need to create migrations or alter the schema.
 
   X A ProductReview is a join between a user and a product. Also has a title, a rating and a description. This is incomplete, it is missing routes, a controller, a view folder and views.
 
- XThere is a Reviews Index page that has tables of all of the ProductReviews and CompanyReviews. We need to add the User who wrote the review to the table.
+ X There is a Reviews Index page that has tables of all of the ProductReviews and CompanyReviews. We need to add the User who wrote the review to the table.
 
-- The last devs didn't add any associations to our models. We need to add them. Companies have products. Look at the Schema and try to decide what belongs to what.
+ X The last devs didn't add any associations to our models. We need to add them. Companies have products. Look at the Schema and try to decide what belongs to what.
 
 - The last devs wrote no Validations. We need to add Validations on Product, ProductReview and CompanyReview:
 
--  Product MUST have a company_id.
+- X Product MUST have a company_id.
 
--  ProductReview MUST have  title, description, product_id, user_id and a rating.
+-  X ProductReview MUST have  title, description, product_id, user_id and a rating.
 
--  CompanyReview MUST have title, description, company_id,  user_id and   rating.
+-  X CompanyReview MUST have title, description, company_id,  user_id and   rating.

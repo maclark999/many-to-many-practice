@@ -3,6 +3,15 @@
   <h1>Create a Product </h1>
 </div>
 
+<% if @product.errors.any? %>
+<div class="alert alert-danger">
+  <% @product.errors.full_messages.each do |message| %>
+    <%= message %><br>
+    <% end %>
+</div>
+<% end %>
+
+
 <%= form_for @product do |f| %>
 
      <p>

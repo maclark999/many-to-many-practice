@@ -2,6 +2,14 @@
   <h1>Create a Company </h1>
 </div>
 
+<% if @company.errors.any? %>
+<div class = "alert alert-danger">
+  <% @company.errors.full_messages.each do |message| %>
+    <%= message %><br>
+  <% end %>
+</div>
+<% end %>
+
 <%= form_for @company do |f| %>
 
      <p>

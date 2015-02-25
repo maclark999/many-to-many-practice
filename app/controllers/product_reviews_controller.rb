@@ -11,9 +11,13 @@ class ProductReviewsController < ApplicationController
       @product_review.product_id = @product.id
       @product_review.user_id = current_user.id
       @product_review.save
-        redirect_to products_path
       else
         redirect_to login_path, notice: "Must be logged in to review a company"
+      end
+        if @product_review.save
+          redirect_to products_path
+      else
+        render 'new'
       end
   end
 private
