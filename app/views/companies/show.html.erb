@@ -1,0 +1,9 @@
+<div class = "page-header">
+  <h1><%=@company.name %></h1>
+</div>
+
+<table>
+<% @company.products.each do |product| %>
+  <%= product.name %><br>
+  <%= product.price %><br>
+<% end %>
